@@ -14,7 +14,7 @@ Command Summary table at the bottom of the guide.
 <h1 id="table-of-contents"> Table of Contents </h1>
 * Table of Contents
 {:toc}
-
+<div style="page-break-after: always;"></div>
 --------------------------------------------------------------------------------------------------------------------
 
 # Quick start
@@ -68,7 +68,6 @@ Optionally, they may have tags and participants as well.
 * **Command Box** : The command box is where you enter your commands to be executed.
 
 --------------------------------------------------------------------------------------------------------------------
-<div style="page-break-after: always;"></div>
 
 # Features
 
@@ -344,7 +343,6 @@ Reminds you of meetings that occur within the given number of days.
 
 Examples:
 * `Reminder 2` lists meetings that occur within 2 days.
-* `Reminder 100` lists meetings that occur within 100 days.
 
 ![example](images/reminder_example.png)
 
