@@ -3,16 +3,25 @@ layout: page
 title: User Guide
 ---
 
-AddresSoC is a desktop app for School of Computing (SoC) students to **keep track of their student network and add meetings**.
+Welcome to the AddresSoc User Guide! AddresSoC is a desktop app for School of Computing (SoC) students to **keep track of their student network and add meetings**.
 It is optimized for use via a Command Line Interface (CLI) while still having the benefits of a Graphical User Interface (GUI).
 If you're a student who can type fast, AddresSoC can get your contact and schedule management tasks done faster than traditional GUI apps.
 
+The User Guide will give you an overview of all the commands with various examples and tips. Refer to the table of contents to get started. 
+
+For a quick summary of all the commands and their syntax, you may refer to the
+Command Summary table at the bottom of the guide.
+
+
+<h1 id="table-of-contents"> Table of Contents </h1>
 * Table of Contents
 {:toc}
 
 --------------------------------------------------------------------------------------------------------------------
 
 # Quick start
+
+## Installation and Setting Up
 
 1. Ensure you have Java `11` or above installed in your Computer.
 
@@ -22,7 +31,11 @@ If you're a student who can type fast, AddresSoC can get your contact and schedu
 
 4. Double-click the file to start the app. The GUI similar to the one below should appear in a few seconds. Note how the app contains some sample data.<br>
    ![Ui](images/Ui.png)
+<div markdown="span" class="alert alert-primary">
 
+:bulb: **Tip:**
+Use the `clear` command to erase the sample data when you are ready to start adding your own!
+</div>
 5. Type the command in the command box and press Enter to execute it. e.g. typing **`help`** and pressing Enter will open the help window.<br>
    Some example commands you can try:
 
@@ -39,6 +52,22 @@ If you're a student who can type fast, AddresSoC can get your contact and schedu
    * **`exit`** : Exits the app.
 
 6. You may refer to the [Features](#features) below for details of each command.
+
+<div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
+
+## Getting to Know the GUI
+
+AddresSoc's GUI mainly consists of a Contact List, Meeting List, Status Message and Command Box. These are clearly indicated
+in the picture below.
+
+![GUIpic](images/GUIpic.png)
+
+* **Contact List** : The contact list tracks all of your contacts. Contacts have mandatory name, email, phone number,
+and telegram handle fields. Optionally, they may have tags as well.
+* **Meeting List** : The meeting list tracks all of your meetings. Meetings have mandatory name, date, start time, and end time fields.
+Optionally, they may have tags and participants as well.
+* **Status Message** : The status message is where AddresSoc communicates with you. It provides you with the results of your commands.
+* **Command Box** : The command box is where you enter your commands to be executed.
 
 --------------------------------------------------------------------------------------------------------------------
 
@@ -67,7 +96,12 @@ If you're a student who can type fast, AddresSoC can get your contact and schedu
   e.g. if the command specifies `help 123`, it will be interpreted as `help`.
 
 </div>
+
+<div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
+
+
 <div style="page-break-after: always;"></div>
+
 
 ## Contact
 
@@ -76,6 +110,8 @@ If you're a student who can type fast, AddresSoC can get your contact and schedu
 Shows you all the contacts in your contact list.
 
 Format: `listc`
+
+<div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
 
 ### Adding a contact : `addc`
 
@@ -94,6 +130,7 @@ Examples:
 Duplicate contacts with the same name, phone number, email or telegram handle cannot be added into the app.
 </div>
 
+<div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
 
 ### Deleting a contact : `deletec`
 
@@ -109,6 +146,7 @@ Examples:
 * `deletec 2` deletes the 2nd person in your currently displayed contact list.
 * `deletec 0` returns an error for invalid input as 0 is not a positive integer.
 
+<div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
 
 ### Editing a contact : `editc`
 
@@ -136,6 +174,8 @@ Examples:
 **:information_source: Note:** The new edited contact follows the same constraints as a new contact to be added using `addc` command.
 </div>
 
+<div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
+
 ### Locating contacts by name and tag: `findc`
 
 Finds the contacts that match your search criteria as explained below:
@@ -158,8 +198,8 @@ Examples:
 * `findc n/Alex n/David t/family t/friends` will return `Alex Yeoh`, `David Li` as both contacts' names contain either `alex` or `david`
 and both contacts are labelled with either the `family` tag or the `friends` tag or both.
   ![example](images/Find_Contact_example3.png)
-  
 
+<div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
 
 ### Sorting contacts : `sortc`
 
@@ -169,7 +209,7 @@ Format: `sortc`
 
 * Sort contacts according to name in ascending alphabetical order.
 
-
+<div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
 
 ## Meeting
 
@@ -179,6 +219,9 @@ Shows you a list of all meetings in your meeting list.
 
 Format: `listm`
 <div style="page-break-after: always;"></div>
+
+<div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
+
 ### Adding a meeting : `addm`
 
 Adds a meeting to your meeting list.
@@ -198,6 +241,7 @@ Format: `addm n/NAME d/DATE st/START_TIME et/END_TIME [pt/CONTACT_INDEX]... [t/T
 **:information_source: Note:** The app will notify you in case of any clash in meeting timings upon adding a meeting. You
 may find information regarding the meetings involved in the clash in the status message given.
 </div>
+
 Examples:
 * `addm n/CS2103 Project Discussion d/23-02-2022 st/1800 et/1930 pt/1 pt/2 pt/3 pt/4 pt/5`
   Adds the meeting "CS2103 Project Discussion" with your given date, time and participants.
@@ -213,6 +257,8 @@ Duplicate meetings with the same name and date cannot be added into the app.
 </div>
 <div style="page-break-after: always;"></div>
 
+<div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
+
 ### Deleting a meeting : `deletem`
 
 Deletes the specified meeting from your currently displayed meeting list.
@@ -226,6 +272,8 @@ Format: `deletem MEETING_INDEX`
 Examples:
 * `deletem 3` deletes the 3rd meeting in your currently displayed meeting list.
 * `deletem -1` returns an error for invalid input as -1 is not a positive integer.
+
+<div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
 
 ### Editing a meeting : `editm`
 
@@ -255,6 +303,8 @@ Examples:
 **:information_source: Note:** The new edited meeting follows the same constraints as a new meeting to be added using `addm` command.
 </div>
 
+<div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
+
 ### Locating meetings by date, name and tag: `findm`
 
 Finds meetings that match your search criteria as explained below:
@@ -278,6 +328,8 @@ Examples:
   **and** has a tag called `important`.
 * `findm n/event n/project d/01-06-2022` returns meetings that occur on `01-06-2022` and are named `event planning` or  `project`, etc.
 
+<div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
+
 ### Sorting meetings : `sortm`
 
 Sorts meetings in the displayed meeting list according to date and time.
@@ -286,6 +338,8 @@ Format: `sortm`
 
 * Sorts meeting according to date.
 * Meetings with the same date are sorted according to time.
+
+<div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
 
 ### Reminder : `reminder`
 
@@ -303,6 +357,7 @@ Examples:
 **:information_source: Note:** Reminder will not remind you of archived meetings.
 </div>
 
+<div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
 
 ### Archive : `archive`
 
@@ -317,6 +372,7 @@ Examples:
 * `archive 2` archives 2nd meeting in the displayed meeting list
 * `archive 0` returns an error for invalid input as 0 is not a positive integer.
 
+<div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
 
 ### Unarchive : `unarchive`
 
@@ -331,6 +387,7 @@ Examples:
 * `unarchive 2` unarchives 2nd meeting in the archive meeting list.
 * `unarchive -2` returns an error for invalid input as 0 is not a positive integer.
 
+<div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
 
 ### Archive list : `archivelist`
 
@@ -343,6 +400,8 @@ Format: `archivelist`
 If you would like to return to view the regular meeting list, use the `listm` command.
 </div>
 
+<div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
+
 ## Common
 
 ### Clearing all entries : `clear`
@@ -350,6 +409,8 @@ If you would like to return to view the regular meeting list, use the `listm` co
 Clears all your contacts and meetings from AddresSoC.
 
 Format: `clear`
+
+<div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
 
 ### Undoing a change : `undo`
 
@@ -373,6 +434,8 @@ removes the added contact from your contact list.
 If you would like to revert a `findc` command, you may use `listc` to return to the full contact list.
 </div>
 
+<div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
+
 ### Redoing an undo : `redo`
 
 Reverts a previous `undo` command.
@@ -382,6 +445,8 @@ Format: `redo`
 Examples:
 * `redo` after an `undo` that reverts a `deletem 3` command will delete the meeting restored by `undo`.
 
+<div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
+
 ### Viewing help : `help`
 
 Shows you a message explaining how to access the help page.
@@ -390,16 +455,22 @@ Shows you a message explaining how to access the help page.
 
 Format: `help`
 
+<div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
+
 ### Exiting the program : `exit`
 
 Exits the program.
 
 Format: `exit`
 
+<div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
+
 ### Saving the data
 
 AddresSoC data (both your contact list and meeting list) is saved in your hard disk automatically after
 any command that changes the data. There is no need for you to save manually.
+
+<div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
 
 ### Editing the data file
 
@@ -409,6 +480,9 @@ folder containing the `addressoc.jar` file to find a folder called `data`. Acces
 <div markdown="span" class="alert alert-warning">:exclamation: **Caution:**
 If your changes to the data file makes its format invalid, AddressSoC will discard all data and start with an empty data file the next time you run the app.
 </div>
+
+<div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
+
 --------------------------------------------------------------------------------------------------------------------
 
 # FAQ
@@ -416,6 +490,7 @@ If your changes to the data file makes its format invalid, AddressSoC will disca
 **Q**: How do I transfer my data to another Computer?<br>
 **A**: When you install the app in the other computer, you may overwrite the empty data file it creates with the file that contains the data of your previous AddresSoc home folder.
 
+<div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
 --------------------------------------------------------------------------------------------------------------------
 
 # Command summary
@@ -443,3 +518,5 @@ Action | Format, Examples
 **Redo** | `redo`
 **Help** | `help`
 **Exit** | `exit`
+
+<div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
