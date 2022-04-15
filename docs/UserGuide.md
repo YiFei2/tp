@@ -7,9 +7,7 @@ Welcome to the AddresSoc User Guide! AddresSoC is a desktop app for School of Co
 It is optimized for use via a Command Line Interface (CLI) while still having the benefits of a Graphical User Interface (GUI).
 If you're a student who can type fast, AddresSoC can get your contact and schedule management tasks done faster than traditional GUI apps.
 
-The User Guide will give you an overview of all the commands with various examples and tips. Refer to the table of contents to get started. 
-
-For a quick summary of all the commands and their syntax, you may refer to the
+The User Guide will give you an overview of all the commands with various examples and tips. Refer to the table of contents to get started. For a quick summary of all the commands and their syntax, you may refer to the
 Command Summary table at the bottom of the guide.
 
 
@@ -99,8 +97,6 @@ Optionally, they may have tags and participants as well.
 
 <div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
 
-
-<div style="page-break-after: always;"></div>
 
 
 ## Contact
@@ -218,7 +214,6 @@ Format: `sortc`
 Shows you a list of all meetings in your meeting list.
 
 Format: `listm`
-<div style="page-break-after: always;"></div>
 
 <div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
 
@@ -255,7 +250,6 @@ Examples:
 <div markdown="span" class="alert alert-warning">:exclamation: **Caution:**
 Duplicate meetings with the same name and date cannot be added into the app.
 </div>
-<div style="page-break-after: always;"></div>
 
 <div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
 
