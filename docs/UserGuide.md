@@ -3,18 +3,19 @@ layout: page
 title: User Guide
 ---
 
-Welcome to the AddresSoc User Guide! AddresSoC is a desktop app for School of Computing (SoC) students to **keep track of their student network and add meetings**.
+Welcome to the AddresSoC User Guide! AddresSoC is a desktop app for School of Computing (SoC) students to **keep track of their student network and add meetings**.
 It is optimized for use via a Command Line Interface (CLI) while still having the benefits of a Graphical User Interface (GUI).
 If you're a student who can type fast, AddresSoC can get your contact and schedule management tasks done faster than traditional GUI apps.
 
 The User Guide will give you an overview of all the commands with various examples and tips. Refer to the table of contents to get started. For a quick summary of all the commands and their syntax, you may refer to the
 Command Summary table at the bottom of the guide.
 
-
+<div style="page-break-after: always;"></div>
 <h1 id="table-of-contents"> Table of Contents </h1>
 * Table of Contents
 {:toc}
 --------------------------------------------------------------------------------------------------------------------
+<div style="page-break-after: always;"></div>
 
 # Quick start
 
@@ -26,35 +27,22 @@ Command Summary table at the bottom of the guide.
 
 3. Copy the file to the folder you want to use as the _home folder_ for your AddresSoC.
 
-4. Double-click the file to start the app. The GUI similar to the one below should appear in a few seconds. Note how the app contains some sample data.<br>
+4. Double-click the file to start the app. The GUI similar to the one below should appear. <br>
    ![Ui](images/Ui.png)
-<div markdown="span" class="alert alert-primary">
+   
+  <div markdown="span" class="alert alert-primary">
+  :bulb: **Tip:**
+  Note how the app contains some sample data. Use the `clear` command to erase the sample data when you are ready to start adding your own!
+  </div>
 
-:bulb: **Tip:**
-Use the `clear` command to erase the sample data when you are ready to start adding your own!
-</div>
-5. Type the command in the command box and press Enter to execute it. e.g. typing **`help`** and pressing Enter will open the help window.<br>
-   Some example commands you can try:
-
-   * **`listc`** : Lists all your contacts.
-
-   * **`addc`**` n/John Doe e/johnd@u.nus.edu p/98076034 th/johnd` : Adds a contact named `John Doe` to your contact list.
-
-   * **`addm`**` n/SE Team Meeting d/23/03/2022 st/1415 et/1615` : Adds a meeting called "SE Team Meeting" on 23 March 2022 from 1415hrs to 1615hrs.
-
-   * **`deletec`**`3` : Deletes the 3rd contact shown in your currently displayed contact list.
-
-   * **`clear`** : Deletes all your contacts and meetings.
-
-   * **`exit`** : Exits the app.
-
-6. You may refer to the [Features](#features) below for details of each command.
+&nbsp;&nbsp;&nbsp;&nbsp;* You may refer to the [Getting to Know the GUI](#getting-to-know-the-gui) section below to learn about the GUI.
+&nbsp;&nbsp;&nbsp;&nbsp;* You may refer to the [Features](#features) section below for details of each command.
 
 <div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
 
 ## Getting to Know the GUI
 
-AddresSoc's GUI mainly consists of a Contact List, Meeting List, Status Message and Command Box. These are clearly indicated
+AddresSoC's GUI mainly consists of a Contact List, Meeting List, Status Message and Command Box. These are clearly indicated
 in the picture below.
 
 ![GUIpic](images/GUIpic.png)
@@ -63,8 +51,10 @@ in the picture below.
 and telegram handle fields. Optionally, they may have tags as well.
 * **Meeting List** : The meeting list tracks all of your meetings. Meetings have mandatory name, date, start time, and end time fields.
 Optionally, they may have tags and participants as well.
-* **Status Message** : The status message is where AddresSoc communicates with you. It provides you with the results of your commands.
+* **Status Message** : The status message is where AddresSoC communicates with you. It provides you with the results of your commands.
 * **Command Box** : The command box is where you enter your commands to be executed.
+
+<div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
 
 --------------------------------------------------------------------------------------------------------------------
 <div style="page-break-after: always;"></div>
@@ -97,9 +87,7 @@ Optionally, they may have tags and participants as well.
 
 <div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
 
-
-
-## Contact
+## Managing contacts
 
 ### Listing all contacts : `listc`
 
@@ -144,6 +132,8 @@ Examples:
 
 <div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
 
+<div style="page-break-after: always;"></div>
+
 ### Editing a contact : `editc`
 
 Edits an existing contact in your currently displayed contact list.
@@ -172,6 +162,8 @@ Examples:
 
 <div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
 
+<div style="page-break-after: always;"></div>
+
 ### Locating contacts by name and tag: `findc`
 
 Finds the contacts that match your search criteria as explained below:
@@ -191,13 +183,13 @@ Examples:
 * `findc t/friends t/family` returns the contacts matching the `friends` tag or the `family` tag or both .
   ![example](images/Find_Contact_example2.png) <br>
 * `findc n/alex t/friends` returns `Alex Yeoh` as the contact's name contains `alex` and the contact is tagged with `friends`.
+<div style="page-break-after: always;"></div>
+
 * `findc n/Alex n/David t/family t/friends` will return `Alex Yeoh`, `David Li` as both contacts' names contain either `alex` or `david`
 and both contacts are labelled with either the `family` tag or the `friends` tag or both.
   ![example](images/Find_Contact_example3.png)
 
 <div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
-
-<div style="page-break-after: always;"></div>
 
 ### Sorting contacts : `sortc`
 
@@ -209,7 +201,10 @@ Format: `sortc`
 
 <div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
 
-## Meeting
+
+<div style="page-break-after: always;"></div>
+
+## Managing meetings
 
 ### Listing all meetings : `listm`
 
@@ -235,7 +230,7 @@ Format: `addm n/NAME d/DATE st/START_TIME et/END_TIME [pt/CONTACT_INDEX]... [t/T
 * Optionally, tags can also be specified for the meeting.
 
 <div markdown="block" class="alert alert-info">
-**:information_source: Note:** AddresSoc will notify you in case of any clash in meeting timings upon adding a meeting. You
+**:information_source: Note:** AddresSoC will notify you in case of any clash in meeting timings upon adding a meeting. You
 may find information regarding the meetings involved in the clash in the status message given.
 </div>
 
@@ -250,7 +245,7 @@ Examples:
   Returns error message as your end time input `et/1400` is earlier than your start time input `st/1500`.
 
 <div markdown="span" class="alert alert-warning">:exclamation: **Caution:**
-Duplicate meetings with the same name and date cannot be added into the AddresSoc.
+Duplicate meetings with the same name and date cannot be added into the AddresSoC.
 </div>
 
 <div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
@@ -270,6 +265,8 @@ Examples:
 * `deletem -1` returns an error for invalid input as -1 is not a positive integer.
 
 <div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
+
+<div style="page-break-after: always;"></div>
 
 ### Editing a meeting : `editm`
 
@@ -296,10 +293,12 @@ Examples:
 * `editm 2 pt/ t/` Clears all existing participants and all existing tags of the 2nd meeting.
 
 <div markdown="block" class="alert alert-info">
-**:information_source: Note:** The new edited meeting follows the same constraints as a new meeting to be added using `addm` command.
+**:information_source: Note:** The new edited meeting follows the same constraints as a new meeting added using the `addm` command.
 </div>
 
 <div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
+
+<div style="page-break-after: always;"></div>
 
 ### Locating meetings by date, name and tag: `findm`
 
@@ -337,6 +336,8 @@ Format: `sortm`
 
 <div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
 
+<div style="page-break-after: always;"></div>
+
 ### Reminder : `reminder`
 
 Format: `reminder NUM_OF_DAYS`
@@ -354,13 +355,14 @@ Examples:
 
 <div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
 
+<div style="page-break-after: always;"></div>
+
 ### Archive : `archive`
 
 Archives the meeting specified by the meeting index. The archived meetings are stored separately in an archived meeting list.
 
 Format: `archive MEETING_INDEX`
 
-* Archives the meeting at the specified `MEETING_INDEX`.
 * `MEETING_INDEX` refers to the index number shown in your currently displayed meetings list.
 * `MEETING_INDEX` **must be a positive integer** 1, 2, 3, …​
 Examples:
@@ -375,12 +377,11 @@ Unarchives the meeting specified by the meeting index. The unarchived meeting is
 
 Format: `unarchive MEETING_INDEX`
 
-* Unarchives the meeting at the specified `MEETING_INDEX`.
 * `MEETING_INDEX` refers to the index number shown in your currently displayed meetings list.
 * `MEETING_INDEX` **must be a positive integer** 1, 2, 3, …​
 Examples:
 * `unarchive 2` unarchives 2nd meeting in the archive meeting list.
-* `unarchive -2` returns an error for invalid input as 0 is not a positive integer.
+* `unarchive -2` returns an error for invalid input as -2 is not a positive integer.
 
 <div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
 
@@ -396,6 +397,8 @@ If you would like to return to view the regular meeting list, use the `listm` co
 </div>
 
 <div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
+
+<div style="page-break-after: always;"></div>
 
 ## Common
 
@@ -430,6 +433,8 @@ If you would like to revert a `findc` command, you may use `listc` to return to 
 </div>
 
 <div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
+
+<div style="page-break-after: always;"></div>
 
 ### Redoing an undo : `redo`
 
@@ -473,7 +478,7 @@ If you are an advanced user, you are welcome to update data directly by editing 
 folder containing the `addressoc.jar` file to find a folder called `data`. Access the folder and edit the `addressoc.json` file found inside.
 
 <div markdown="span" class="alert alert-warning">:exclamation: **Caution:**
-If your changes to the data file makes its format invalid, AddressSoC will discard all data and start with an empty data file the next time you run the app.
+If your changes to the data file makes its format invalid, AddresSoC will discard all data and start with an empty data file the next time you run the app.
 </div>
 
 <div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
@@ -483,12 +488,17 @@ If your changes to the data file makes its format invalid, AddressSoC will disca
 # FAQ
 
 **Q**: How do I transfer my data to another Computer?<br>
-**A**: When you install AddresSoc in the other computer, you may overwrite the empty data file it creates with the file that contains the data of your previous AddresSoc home folder.
+**A**: When you install AddresSoC in the other computer, you may overwrite the empty data file it creates with the file that contains the data of your previous AddresSoC home folder.
 
 <div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
+
 --------------------------------------------------------------------------------------------------------------------
 
+<div style="page-break-after: always;"></div>
+
 # Command summary
+
+## Managing contacts
 
 Action | Format, Examples
 --------|------------------
@@ -498,6 +508,13 @@ Action | Format, Examples
 **Edit contact** | `editc CONTACT_INDEX [n/NAME] [p/PHONE_NUMBER] [e/EMAIL] [th/TELEGRAM_HANDLE] [t/TAG]…​`<br> e.g.,`editc 2 n/James Lee e/jameslee@example.com`
 **Find contact** | `findc [n/NAME]... [t/TAGS]...`<br> e.g., `findc n/James n/Jake`
 **Sort contact** | `sortc`
+
+<div style="page-break-after: always;"></div>
+
+## Managing meetings
+
+Action | Format, Examples
+--------|------------------
 **List meetings** | `listm`
 **Add meeting** | `addm n/NAME d/DATE st/START_TIME et/END_TIME [pt/CONTACT_INDEX]... [t/TAGS]...` <br>e.g., `addm n/CS2103 Project Discussion d/20/02/2022 st/1800 et/1930 pt/1 pt/2 pt/3`
 **Delete meeting** | `deletem MEETING_INDEX`<br> e.g., `deletem 2`
@@ -508,6 +525,13 @@ Action | Format, Examples
 **Archive meeting** | `archive MEETING_INDEX`
 **Unarchive meeting** | `unarchive MEETING_INDEX`
 **List archived meetings** | `archivelist`
+
+<div style="page-break-after: always;"></div>
+
+## Common
+
+Action | Format
+--------|------------------
 **Clear** | `clear`
 **Undo** | `undo`
 **Redo** | `redo`
