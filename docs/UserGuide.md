@@ -68,6 +68,7 @@ Optionally, they may have tags and participants as well.
 * **Command Box** : The command box is where you enter your commands to be executed.
 
 --------------------------------------------------------------------------------------------------------------------
+<div style="page-break-after: always;"></div>
 
 # Features
 
