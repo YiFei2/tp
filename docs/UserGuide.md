@@ -35,8 +35,8 @@ Command Summary table at the bottom of the guide.
   Note how the app contains some sample data. Use the `clear` command to erase the sample data when you are ready to start adding your own!
   </div>
 
-&nbsp;&nbsp;&nbsp;&nbsp;* You may refer to the [Getting to Know the GUI](#getting-to-know-the-gui) section below to learn about the GUI.
-&nbsp;&nbsp;&nbsp;&nbsp;* You may refer to the [Features](#features) section below for details of each command.
+* You may refer to the [Getting to Know the GUI](#getting-to-know-the-gui) section below to learn about the GUI.
+* You may refer to the [Features](#features) section below for details of each command.
 
 <div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
 
