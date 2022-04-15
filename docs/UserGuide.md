@@ -14,7 +14,6 @@ Command Summary table at the bottom of the guide.
 <h1 id="table-of-contents"> Table of Contents </h1>
 * Table of Contents
 {:toc}
-<div style="page-break-after: always;"></div>
 --------------------------------------------------------------------------------------------------------------------
 
 # Quick start
