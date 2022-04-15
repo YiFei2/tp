@@ -67,6 +67,7 @@ Optionally, they may have tags and participants as well.
 * **Command Box** : The command box is where you enter your commands to be executed.
 
 --------------------------------------------------------------------------------------------------------------------
+<div style="page-break-after: always;"></div>
 
 # Features
 
@@ -196,6 +197,8 @@ and both contacts are labelled with either the `family` tag or the `friends` tag
 
 <div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
 
+<div style="page-break-after: always;"></div>
+
 ### Sorting contacts : `sortc`
 
 Sort contacts in the displayed contact list according to name.
@@ -232,7 +235,7 @@ Format: `addm n/NAME d/DATE st/START_TIME et/END_TIME [pt/CONTACT_INDEX]... [t/T
 * Optionally, tags can also be specified for the meeting.
 
 <div markdown="block" class="alert alert-info">
-**:information_source: Note:** The app will notify you in case of any clash in meeting timings upon adding a meeting. You
+**:information_source: Note:** AddresSoc will notify you in case of any clash in meeting timings upon adding a meeting. You
 may find information regarding the meetings involved in the clash in the status message given.
 </div>
 
@@ -247,7 +250,7 @@ Examples:
   Returns error message as your end time input `et/1400` is earlier than your start time input `st/1500`.
 
 <div markdown="span" class="alert alert-warning">:exclamation: **Caution:**
-Duplicate meetings with the same name and date cannot be added into the app.
+Duplicate meetings with the same name and date cannot be added into the AddresSoc.
 </div>
 
 <div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
@@ -312,7 +315,7 @@ Format: `findm [d/DATES]... [n/NAMES]... [t/TAGS]...`
     * Only full words are matched e.g. `n/proj` matches `proj meeting` but not `project meeting`.
 * If you specify more than one type of input, meetings matching at least **one of each type** will be returned. 
   
-  eg. If you specify both `n/NAMES` and `t/TAGS`, meetings matching at least one of `NAMES`
+  e.g. If you specify both `n/NAMES` and `t/TAGS`, meetings matching at least one of `NAMES`
   **and** at least one of `TAGS` will be returned.
 
 Examples:
@@ -480,7 +483,7 @@ If your changes to the data file makes its format invalid, AddressSoC will disca
 # FAQ
 
 **Q**: How do I transfer my data to another Computer?<br>
-**A**: When you install the app in the other computer, you may overwrite the empty data file it creates with the file that contains the data of your previous AddresSoc home folder.
+**A**: When you install AddresSoc in the other computer, you may overwrite the empty data file it creates with the file that contains the data of your previous AddresSoc home folder.
 
 <div style="text-align: right"> <a href="#table-of-contents">Back to top  </a> </div>
 --------------------------------------------------------------------------------------------------------------------
